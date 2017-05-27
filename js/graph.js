@@ -42,7 +42,7 @@ Orbit = function () {
 		var n = 2 * Math.PI / T; // mean motion
 		var t = time;
 		if (t > T) {
-			//t = t - T * Math.floor(t / T); // making t within 0..T gives better starting precision. Maybe.
+			t = t - T * Math.floor(t / T); // making t within 0..T gives better starting precision. Maybe.
 		}
 		var M = n * t; // mean anomaly
 
@@ -114,8 +114,6 @@ window.onload = function () {
 	orbit.eccentricity = eccentricity;
 	orbit.orbitRotationAngle = angle * Math.PI / 180;
 	orbit.updateAll();
-	
-	console.log(orbit);
 
 	window.setInterval(function () {
 	//window.setTimeout(function() {
