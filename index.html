@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star System Test</title>
+	<script src="js/graph.js"></script>
+</head>
+<body>
+	<div>
+		<h1>Star System Test</h1>
+	</div>
+
+	<canvas id="canvas" width="600px" height="600px" style="border: 1px solid black;"></canvas>
+	<div>
+
+	</div>
+
+
+	<!--I planned to make star system editor, but it's too tedious in js, so I'll probably drop it-->
+	<div id="resources" hidden>
+		<div class="star">
+			<ul>
+				<li>
+					<span>Mass</span>
+					<input class="mass" type="number">
+					<span>Solar Masses</span>
+				</li>
+				<li>
+					<span>Type</span>
+					<span>(<span class="suggested_type"></span>)</span>
+					<select class="type"></select>
+				</li>
+				<li>
+					<span>Temperature</span>
+					<span>(<span class="suggested_temperature"></span>)</span>
+					<input class="temperature" type="number">
+					<span>Kelvins</span>
+				</li>
+				<li>
+					<span>Luminosity</span>
+					<span>(<span class="suggested_luminosity"></span>)</span>
+					<input class="luminosity" type="number">
+					<span>Solar Luminosities</span>
+				</li>
+				<li>Radius: <span class="radius"></span> AU</li>
+				<li>Inner Limit: <span class="limit_inner"></span> AU</li>
+				<li>Outer Limit: <span class="limit_outer"></span> AU</li>
+				<li>Snow Line: <span class="snow_line"></span> AU</li>
+			</ul>
+			<table class="orbits"></table>
+		</div>
+
+		<table>
+			<tr class="orbit">
+				<td class="order"></td>
+				<td class="type"></td>
+				<td class="blackbody_temperature"></td>
+				<td class="radius"></td>
+				<td class="eccentricity"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
